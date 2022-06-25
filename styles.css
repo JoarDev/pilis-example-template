@@ -1,18 +1,32 @@
 
 :root {
-  --primary-color: #3282B8;
-  --primary-color-dark: #0F4C75;
+  --primary-color: #313131;
+  --primary-color-dark: #313131;
   --accent-color: #FFF8F0;
 }
 
 html {
   scroll-behavior: smooth;
 }
+html, body {
+	height: 100%;
+}
+/* body {
+	background: #151515;
+	font-family: "lora-regular", serif;
+	font-size: 1.7rem;
+	line-height: 3rem;
+	color: #6e6e6e;
+} */
 
 body {
+  font-weight: normal;
   margin: 0;
   padding: 0;
-  font-family: 'Manrope', sans-serif;
+  font-size: 1.7rem;
+  line-height: 3rem;
+  font-family: "lora-regular", serif;
+  color: #6e6e6e;
 }
 
 
@@ -58,7 +72,7 @@ footer {
  * ------------------------------------------------------------------- 
  */
  #intro {
-	background: #151515 url(../images/intro-bg.jpg) no-repeat center bottom;
+	background: #151515 url(../images/andreas-kind-unsplash.jpg) no-repeat center bottom;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
@@ -270,7 +284,7 @@ footer {
 
 .about-content {
 	position: relative;
-	text-align: left;
+	text-align: center;
 	max-width: 850px;
 	margin-bottom: 3.6rem;
 }
@@ -313,8 +327,28 @@ footer {
 .button-section .button {
 	width: 250px;
 }
-.button-section [class*="col-"] .button:first-child {
-	margin-right: 4rem;
+
+.button.button-primary,
+a.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+	background: #313131;
+	color: #FFFFFF;
+}
+.button.button-primary:hover,
+a.button.button-primary:hover,
+button.button-primary:hover,
+input[type="submit"].button-primary:hover,
+input[type="reset"].button-primary:hover,
+input[type="button"].button-primary:hover,
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type="submit"].button-primary:focus,
+input[type="reset"].button-primary:focus,
+input[type="button"].button-primary:focus {
+	background: #1f1f1f;
 }
 
 /**
@@ -440,4 +474,101 @@ button.stroke, .button.stroke {
 	background: transparent !important;
 	border: 3px solid #313131;
 	line-height: 4.8rem;
+}
+
+/** 
+ * ===================================================================
+ * 08. common styles (_layout.scss)
+ *
+ * ------------------------------------------------------------------- 
+ */
+ .grey-section {
+	background: #ebebeb;
+}
+.grey-section p.lead {
+	color: #7d7d7d;
+}
+.section-intro {
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	margin-bottom: 3.6rem;
+	position: relative;
+}
+.section-intro h1 {
+	font-family: "poppins-semibold", serif;
+	font-size: 3.6rem;
+	color: #313131;
+	line-height: 1.25;
+	margin-bottom: 1.2rem;
+}
+.section-intro h5 {
+	color: #FF0077;
+	font-size: 1.6rem;
+	line-height: 1.875;
+	margin-bottom: 0.3rem;
+	letter-spacing: .4rem;
+}
+
+/**
+ * responsive:
+ * common styles
+ * ------------------------------------------------------------------- 
+ */
+@media only screen and (max-width:768px) {
+	.section-intro {
+		max-width: 650px;
+	}
+	.section-intro h1 {
+		font-size: 3rem;
+	}
+}
+@media only screen and (max-width:600px) {
+	.section-intro h1 {
+		font-size: 2.6rem;
+	}
+	.section-intro h5 {
+		font-size: 1.5rem;
+		letter-spacing: .3rem;
+	}
+}
+@media only screen and (max-width:400px) {
+	.section-intro h1 {
+		font-size: 2.4rem;
+	}
+}
+
+p.lead {
+	font-family: "lora-regular", serif;
+	font-size: 2rem;
+	line-height: 1.8;
+	color: #888888;
+}
+
+/**
+ * skillbars - (_skillbars.scss)
+ * -------------------------------------------------------------------
+ */
+ .skill-bars {
+	list-style: none;
+    text-align: center;
+}
+.skill-bars li {
+    display: inline-block;
+	height: .6rem;
+	width: 100%;
+	margin-bottom: 6rem;
+	padding: 0;
+	position: relative;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
 }
