@@ -537,6 +537,18 @@ button.stroke, .button.stroke {
 	.section-intro h1 {
 		font-size: 2.4rem;
 	}
+	.tech-icons-container .tech-icon-list{
+		padding: 0px 20px;
+	}
+	.tech-icon-list .tech-icon-item {
+		margin-right: 10px;
+	}
+	.tech-icon-item img {
+		height: 60px;
+	}
+	.tech-icon-item-end img {
+		height: 60px;
+	}
 }
 
 p.lead {
@@ -572,3 +584,53 @@ ul {
     margin-inline-end: 0px;
     padding-inline-start: 0px;
 }
+
+
+/* Section tecnologies */
+
+.tech-icons-container {
+	background-color: rgba(255, 255, 255, 0.801);
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	padding-top: 40px;
+	
+  }
+  
+  .tech-icon-list {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 0px 60px;
+  }
+  
+  .tech-icon-list-end {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	padding: 0px 60px;
+  }
+  
+  .tech-icon-item {
+	display: flex;
+	flex-direction: column;
+	margin-right: 80px;
+	margin-bottom: 80px;
+	align-items: center;
+  }
+  
+  .tech-icon-item-end {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 80px;
+	align-items: center;
+  }
+
+  .tech-icons-container span {
+	font-family: "lora-regular", serif;
+	font-size: 2rem;
+	line-height: 1.8;
+	color: #888888;
+  }
